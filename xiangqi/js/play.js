@@ -312,6 +312,6 @@ play.showWin = function (my) {
   if (my === 1) {
     alert("恭喜你，你赢了！");
   } else {
-    alert("很遗憾，你输了！林润帆帅（名词）死了");
+    alert("很遗憾，你输了！林润帆帅（名词）死了/doge");
   }
 };
