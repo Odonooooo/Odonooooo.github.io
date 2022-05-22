@@ -310,8 +310,8 @@ play.getClickMan = function (e) {
 play.showWin = function (my) {
   play.isPlay = false;
   if (my === 1) {
-    alert("恭喜你，你赢了！");
+    alert("赢了，游戏里的你，是真的强大！");
   } else {
-    alert("很遗憾，你输了！林润帆帅（名词）死了/doge");
+    alert("输了，就是逊哎");
   }
 };
