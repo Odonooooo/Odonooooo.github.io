@@ -310,7 +310,7 @@ play.getClickMan = function (e) {
 play.showWin = function (my) {
   play.isPlay = false;
   if (my === 1) {
-    alert("赢了，游戏里的你，是真的强大！");
+    alert("赢了，游戏里的你，再强大也是真的！");
   } else {
     alert("输了，就是逊哎");
   }
