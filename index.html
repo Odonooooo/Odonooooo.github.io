@@ -16,7 +16,7 @@
         opacity: 1;
         height: 37px;
         margin: 0 auto;
-        background: white;
+        background: rgba(255, 255, 255, 0.953);
         position: fixed;
         top: 0;
         left: 0;
@@ -443,13 +443,14 @@
                 [ 移动端通过疯狂盲点屏幕也可以玩 ]
             </p>
             <h1 style="color: gray;text-align: center;">-</h1>
-            <h1 class=name style="color: #804F23;font-size:170%">『 寻找不动的emoji 』
+            <h1 class=name style="text-align:center;color: rgb(71, 68, 68);font-size:140%">『 扫雷 』
             </h1>
             <p style="text-align:center;">
-                <img style="width: 200px;margin: 10px" src="https://tse1-mm.cn.bing.net/th/id/OIP-C.2IioIoUofiYjlMQrCWkrgQHaHa?w=216&h=216&c=7&r=0&o=5&dpr=1.4&pid=1.7"></img>
+                <img style="width: 200px;margin: 10px" src="https://tse3-mm.cn.bing.net/th/id/OIP-C.f34Iqd7BK42G0bF4L3cErwAAAA?w=180&h=180&c=7&r=0&o=5&dpr=1.4&pid=1.7"></img>
+
             </p>
 
-            <a href="http://emojisandearthporn.com/200-junk-food.html">
+            <a href="http://www.minesweeper.cn/index1.htm">
                 <button class="butt-enter">
                     进入网站
                 </button>
@@ -457,14 +458,16 @@
             <p style="color: rgba(165, 79, 42, 0.888); font-size:100%; font-weight: 100">
                 <a style="color: rgba(165, 79, 42, 0.888); font: size 100%;; font-weight: 800">
                     简介：
-                </a> 如题，一个寻找不会动的emoji的游戏
+                </a> 就是扫雷而已
             </p>
+
             <p style="color: rgba(165, 79, 42, 0.888); font-size:100%; font-weight: 100">
-                比较无脑 | 消遣
+                正经 | 要脑子
             </p>
             <p style="color: rgba(133, 118, 112, 0.888); font-size:100%; font-weight: 100">
                 [ 支持移动端 ]
             </p>
+
 
             <h1 style="color: gray;text-align: center;">-</h1>
             <h1 class=name style="color: black;font-size:170%">『 请画一个小人 』
@@ -594,21 +597,24 @@
             } else if (winPos >= NodePos[2] && winPos <= NodePos[3]) {
                 $('.wc-nav a').removeClass('active');
                 $('.wc-nav a:nth-child(3)').addClass('active');
+            } else if (winPos >= NodePos[3] && winPos <= NodePos[4]) {
+                $('.wc-nav a').removeClass('active');
+                $('.wc-nav a:nth-child(4)').addClass('active');
             }
+            $(function() {
+                var scTop = 0; //初始化垂直滚动的距离
+                $(document).scroll(function() {
+                    scTop = $(this).scrollTop(); //获取到滚动条拉动的距离
+                    console.log(scTop); //查看滚动时，垂直方向上，滚动条滚动的距离
+                    if (scTop >= 200) {
+                        //核心部分：当滚动条拉动的距离大于等于导航栏距离顶部的距离时，添加指定的样式
+                        $("#sort_menus").addClass("fixDiv");
+                    } else {
+                        $("#sort_menus").removeClass("fixDiv");
+                    }
+                });
+            })
         }
-        $(function() {
-            var scTop = 0; //初始化垂直滚动的距离
-            $(document).scroll(function() {
-                scTop = $(this).scrollTop(); //获取到滚动条拉动的距离
-                console.log(scTop); //查看滚动时，垂直方向上，滚动条滚动的距离
-                if (scTop >= 200) {
-                    //核心部分：当滚动条拉动的距离大于等于导航栏距离顶部的距离时，添加指定的样式
-                    $("#sort_menus").addClass("fixDiv");
-                } else {
-                    $("#sort_menus").removeClass("fixDiv");
-                }
-            });
-        })
     </script>
 </body>
 
