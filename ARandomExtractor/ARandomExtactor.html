@@ -5,20 +5,23 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>『一个抽号器』货物标签页</title>
-    <link rel="shortcut icon" href="/ARandomExtractor/icon.png">
+    <title>一个杂货店</title>
+    <link rel="shortcut icon" href="/hut.png">
 </head>
+
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/v.js"></script>
 <style>
     .header {
         opacity: 1;
         height: 37px;
         margin: 0 auto;
-        background: rgba(255, 255, 255, 0.777);
+        background: rgba(255, 255, 255, 0.926);
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
-        box-shadow: 0px 15px 15px -15px rgba(96, 94, 94, 0.41);
+        box-shadow: 4px 8px 12px -11px rgba(96, 94, 94, 0.41);
     }
     
     .wrap-content {
@@ -52,7 +55,6 @@
         -moz-user-focus: none;
         -moz-user-select: none;
         position: relative;
-        text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1)
     }
     
     .wc-nav a span {
@@ -89,7 +91,7 @@
     */
     
     .wcc-list {
-        border: 1px solid #002fa75a;
+        border: 1px solid rgba(165, 79, 42, 0.429);
     }
     
     .name {
@@ -100,218 +102,491 @@
         cursor: pointer;
         height: 40px;
         border-radius: 4px;
-        border-color: #ffc000ff;
-        background-color: #ffc000ff;
+        border-color: rgba(169, 100, 71, 0.849);
+        background-color: rgba(165, 79, 42, 0.888);
         color: white;
         font-size: 130%;
         font-weight: 700;
     }
+    /*        ———————————————— 版权声明：本文为CSDN博主「缝隙里看你」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。 原文链接：https: //blog.csdn.net/qq_42097490/article/details/115350809
+*/
 </style>
 
 <body>
-    <div class="header" style=" height: 45px;">
-        <a style="text-decoration: none; margin-left: 10px;padding: 5px; letter-spacing:2px; font-size: 150%;line-height:43px; font-weight:800; color: rgba(165, 79, 42, 0.888);margin: auto;" href="/index.html">
+
+    <div class="header" style="height: 45px;">
+        <p style="margin-left: 10px;padding: 4px; letter-spacing:2px; font-size: 150%; font-weight:800; color: rgba(165, 79, 42, 0.888);margin: auto;">
             ·一个杂货店·
-        </a>
+        </p>
+
+
     </div>
-    <div style=" text-align: center; padding: 0px">
-    </div>
+    <div style="height: 60px;margin:auto;"></div>
     <div class="wc-nav" id="sort_menus;">
         <div style="float: left;" class="wrap-content">
             <!--导航-->
 
-            <a style="margin-right: 10px;color: #002fa7;" href="#a" class='active'>下载入口 </a>
-            <a style="margin-right: 10px;color: #002fa7;" href="#b">功能简介</a>
+            <a style="margin-right: 7px;color: rgb(255, 214, 138);" href="#a" class='active'>货架 </a>
+            <a style="margin-right: 7px;color: rgb(255, 214, 138);" href="#b">工具专柜</a>
 
+            <a style="margin-right: 7px;color: rgb(255, 214, 138);" href="#c">游戏专柜</a>
         </div>
     </div>
+    <!--内容-->
     <div style="
         text-align: center;
         max-width: 760px;
         margin: 30px auto;
         padding: 15px;
         line-height: 1.7;
-      ">
-        <p style="text-align:center">
-            <img src="/ARandomExtractor/icon.png"></img>
+        ">
+        <p>
+            <img style="width: 400;" src="/hut.png"></img>
         </p>
-
-        <h1 style="text-shadow: 5px 5px 7px rgba(0, 0, 0, 0.188);letter-spacing: 10px; font-size: 40px;color:#002fa7">
-            ·一个抽号器·
-        </h1>
-        <p style="
-                letter-spacing: 7px;
-                font-size: 25px;
-                font-weight: 100;
-                color: #002fa7;
-                            ">
-            ARandomExtractor
+        <script async src="//finicounter.eu.org/finicounter.js"></script>
+        <span style="color: rgba(165, 79, 42, 0.678);font-weight: 100;  font-size: 100%" id="busuanzi_container_page_pv">
+            “ 欢迎光——临！您是本店的第<span id="busuanzi_value_page_pv"></span>位顾客哎。（来过的也算”</span>
+        <p style="color: rgba(165, 79, 42, 0.678);font-weight: 100; font-size: 100%;" id="busuanzi_container_page_pv">“ 随便逛逛吧~ ”
         </p>
-        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-        <span style="text-align:center;color: gray;font-weight: 100; font-size:small" id="busuanzi_container_page_pv">
-            该货物被查看了<span id="busuanzi_value_page_pv"></span>次
-        </span>
     </div>
-    <div class="wcc-list" style="
-        text-align: center;
-        max-width: 760px;
-        margin: 30px auto;
-        padding: 15px;
-        line-height: 1.7;
-      ">
+    <h1 style="color: gray;text-align: center;">·</h1>
 
-        <h1 style="color: gray;text-align: center;">·</h1>
-        <a name="a" style=" position: relative;top:-30px;display: block;height: 0;overflow: hidden;"></a>
+    <h1 class="name" style="color: rgba(165, 79, 42, 0.888);text-align: center;">| 货架 |</h1>
+    <div class="wc-content">
+        <!---------------------------------------------------------------->
+        <a name="a" style="position: relative;top: -174px;display: block;height: 0;overflow: hidden;"></a>
+        <div id="a1" class="wcc-list wcc-list-item" style="
+          text-align: center;
+          max-width: 760px;
+          margin: 30px auto;
+          padding: 15px;
+          line-height: 1.7;
+        ">
+            <h1 style="color: gray;text-align: center;">-</h1>
 
-        <h1 id="a1" class="name" style="color: #002fa7">| 下载入口 |
-            <p style="color:black; font-size: 50%; font-weight: 100">
-                （目前仅支持PC端）
+
+            <h1 class=name style="color: #002fa7"> 『 一个抽号器 』
+                <p style="color:black; font-size: 50%; font-weight: 100">
+                </p>
+            </h1>
+            <p style="text-align:center;">
+                <img style="width: 160px;margin: 10px" src="ARandomExtractor/icon.png"></img>
             </p>
-        </h1>
-        <h3 style="color: gray;text-align: center;">—</h3>
-        <p style="font-size:180%; font-weight: 800">
-            网页下载
-        </p>
 
-        <a href="/ARandomExtractor\ARandomExtractor-setup.zip">
-            <button class="butt-enter">
-                开始下载
-            </button>
-        </a>
 
-        <p style="color: #ffc000ff; font-size:100%; font-weight: 100">
-            <a style="color: #ffc000ff; font: size 100%;; font-weight: 800">
-                推荐
-            </a> | 下载速度快 | 20MB
-        </p>
-        <p style="color:#8e8e8ed6; font-size:90%; font-weight: 100">
-            ps: 通过该途径下载完成后第一次打开软件可能会弹出安全警告，点仍然运行就好了~
+            <a href="ARandomExtractor/ARandomExtactor.html">
+                <button class="butt-enter">
+                    查看详细
+                </button>
+            </a>
+            <p style="color: rgba(165, 79, 42, 0.888); font-size:100%; font-weight: 100">
+                <a style="color: rgba(165, 79, 42, 0.888); font: size 100%;; font-weight: 800">
+                    简介：
+                </a> 一个好玩的抽号器
+            </p>
+            <p style="color: rgba(133, 118, 112, 0.888) ; font-size:100%; font-weight: 100">
+                [ 不支持移动端 ]
+            </p>
 
-        </p>
+            <h1 style="color: gray;text-align: center;">-</h1>
 
-        <h3 style="color: gray;text-align: center;">—</h3>
+            <h1 class=name style="color: #fd8f00ae"> 『 一个钟 』 </h1>
+            <p style="font-size:180%; font-weight: 800">
+                <p style="text-align:center;">
+                    <img src="ACountdownApplet/icon.png"></img>
+                </p>
+                <a href="ACountdownApplet/AClock.html">
+                    <button class="butt-enter">
+                    查看详细
+                </button>
+                </a>
+                <p style="color: rgba(165, 79, 42, 0.888); font-size:100%; font-weight: 100">
+                    <a style="color: rgba(165, 79, 42, 0.888); font: size 100%;; font-weight: 800">
+                    简介：
+                </a> 一个高颜值的高考倒计时小程序
+                </p>
+                <p style="color: rgba(133, 118, 112, 0.888) ; font-size:100%; font-weight: 100">
+                    [ 不支持移动端 ]
+                </p>
+        </div>
+        <!---------------------------------------------------------------------------------------------->
+        <a name="b" style=" position: relative;top:39px;display: block;height: 0;overflow: hidden;"></a>
+        <h1 class=name style="color: rgba(165, 79, 42, 0.888);text-align: center;">| 经销柜台 |</h1>
 
-        <p style="font-size:170%; font-weight: 800">
-            百度网盘下载
-        </p>
+        <div id="a2" class="wcc-list" style="
+          text-align: center;
+          max-width: 760px;
+          margin: 30px auto;
+          padding: 15px;
+          line-height: 1.7;
+        ">
+            <h2 style="color: rgba(165, 79, 42, 0.888);text-align: center;">- 工具专柜 -</h2>
 
-        <a href="https://pan.baidu.com/s/1IHSBqpWoffq1jiJic7psYA?pwd=1014">
-            <button class="butt-enter">
-                开始下载
-            </button>
-        </a>
+            <h1 style="color: gray;text-align: center;">-</h1>
 
-        <div>
-            <h5 style="color: gray;">·</h5>
-            <h3 style="color: black;">百度网盘二维码下载</h3>
-            <p style="text-align:center">
-                <img src="/ARandomExtractor/BaiduNetDiskShare.png"></img>
+            <h1 class=name style="color: #9999FF"> 『 GeoGebra 』 </h1>
+            <p style="text-align:center;">
+                </h1>
+                <img style="width: 180px;margin: 10px" src="https://www.geogebra.org/resource/etg2rk8j/1KKR5Ls6NcKLGvfH/material-etg2rk8j-thumb.png"></img>
+            </p>
+
+            <a href="https://www.geogebra.org/">
+                <button class="butt-enter">
+                    进入网站
+                </button>
+            </a>
+            <p style="color: rgba(165, 79, 42, 0.888); font-size:100%; font-weight: 100">
+                <a style="color: rgba(165, 79, 42, 0.888); font: size 100%;; font-weight: 800">
+                    简介：
+                </a> 一个免费的数学工具, 用于绘图计算, 几何作图, 白板协作等等
+            </p>
+            <p style="color: rgba(133, 118, 112, 0.888) ; font-size:100%; font-weight: 100">
+                [ 支持移动端 ]
+            </p>
+
+            <h1 style="color: gray;text-align: center;">-</h1>
+
+            <h1 style="text-shadow: 5px 5px 7px rgba(0, 0, 0, 0.133); color: #00a9fd"> 『 傲软在线录屏 』 </h1>
+            <p style="text-align:center;">
+                <img src="https://qncdn.aoscdn.com/img/logo.png"></img>
+            </p>
+
+            <a href="https://www.apowersoft.cn/free-online-screen-recorder?apptype=chn-xigua">
+                <button class="butt-enter">
+                    进入网站
+                </button>
+            </a>
+            <p style="color: rgba(165, 79, 42, 0.888); font-size:100%; font-weight: 100">
+                <a style="color: rgba(165, 79, 42, 0.888); font: size 100%;; font-weight: 800">
+                    简介：
+                </a> 一个免费的在线录屏应用，可以在网页中使用它对电脑屏幕与摄像头进行录制
+            </p>
+            <p style="color: rgba(133, 118, 112, 0.888) ; font-size:100%; font-weight: 100">
+                [ 不支持移动端 ]
+            </p>
+
+
+            <h1 style="color: gray;text-align: center;">-</h1>
+
+            <h1 class=name style="color: #2D2C32;font-size:170%">『 A SOFT MURMUR 』
+            </h1>
+            <p style="text-align:center;">
+                <img src="https://api.iowen.cn/favicon/asoftmurmur.com.png"></img>
+            </p>
+
+            <a href="https://asoftmurmur.com/">
+                <button class="butt-enter">
+                    进入网站
+                </button>
+            </a>
+            <p style="color: rgba(165, 79, 42, 0.888); font-size:100%; font-weight: 100">
+                <a style="color: rgba(165, 79, 42, 0.888); font: size 100%;; font-weight: 800">
+                    简介：
+                </a> 一个简洁、音源丰富的免费白噪音网站
+            </p>
+            <p style="color: rgba(133, 118, 112, 0.888) ; font-size:100%; font-weight: 100">
+                [ 支持移动端 | 国外服务器，或出现加载卡慢 ]
+            </p>
+
+            <h1 style="color: gray;text-align: center;">-</h1>
+
+            <h1 class=name style="color: #5c5a69;font-size:170%">『 wallhaven 』
+            </h1>
+            <pstyle="text-align:center;">
+                <img src="https://wallhaven.cc/images/layout/logo.png"></img>
+                </p>
+
+                <a href="https://wallhaven.cc/">
+                    <button class="butt-enter">
+                        进入网站
+                    </button>
+                </a>
+                <p style="color: rgba(165, 79, 42, 0.888); font-size:100%; font-weight: 100">
+                    <a style="color: rgba(165, 79, 42, 0.888); font: size 100%;; font-weight: 800">
+                        简介：
+                    </a> 一个图源丰富、高品质、可自定义图片下载尺寸的桌面壁纸网站（其搜索算法区分中英文，建议使用英文搜索相关内容）
+                </p>
+
+                <p style="color: rgba(133, 118, 112, 0.888); font-size:100%; font-weight: 100">
+                    [ 支持移动端 | 国外服务器，或出现加载卡慢 ]
+                </p>
+
+        </div>
+
+        <!---------------------------------------------------------------------------------------------->
+
+        <a name="c" style=" position: relative;top: -25px;display: block;height: 0;overflow: hidden;"></a>
+
+        <div id="a3" class="wcc-list" style="
+          text-align: center;
+          max-width: 760px;
+          margin: 30px auto;
+          padding: 15px;
+          line-height: 1.7;
+        ">
+
+            <h2 style="color: rgba(165, 79, 42, 0.888)">- 游戏专柜 - </h2 style="color:black; font-size: 50%; font-weight: 100">
+            <h1 style="color: gray;text-align: center;">-</h1>
+            <h1 class=name style="color: #1A2B34;font-size:170%">『 poki 』
+            </h1>
+            <p style="text-align:center;">
+                <img src="https://tse1-mm.cn.bing.net/th/id/OIP-C.tj-0WWUSyxy5wxyTdQibtAAAAA?pid=ImgDet&rs=1"></img>
+            </p>
+
+            <a href="https://poki.cn/">
+                <button class="butt-enter">
+                    进入网站
+                </button>
+            </a>
+            <p style="color: rgba(165, 79, 42, 0.888); font-size:100%; font-weight: 100">
+                <a style="color: rgba(165, 79, 42, 0.888); font: size 100%;; font-weight: 800">
+                    简介：
+                </a> 一个游戏内容丰富、界面简洁的小众在线小游戏网站
+            </p>
+            <p style="color: rgb(165, 79, 42); font-size:100%; font-weight: 100">
+                正经 | 丰富
+            </p>
+            <p style="color: rgba(133, 118, 112, 0.888); font-size:100%; font-weight: 100">
+                [ 支持移动端 | 国外服务器，或出现加载卡慢]
+            </p>
+            <h1 style="color: gray;text-align: center;">-</h1>
+            <h1 class=name style="color:#673FFF;font-size:170%">『 CrazyGames 』
+            </h1>
+            <p style="text-align:center;">
+                <img src="https://tse4-mm.cn.bing.net/th/id/OIP-C.UZ0rfVY4MNGgExomBrHhVAAAAA?w=128&h=128&c=7&r=0&o=5&dpr=1.4&pid=1.7"></img>
+            </p>
+
+            <a href="https://www.crazygames.com/">
+                <button class="butt-enter">
+                    进入网站
+                </button>
+            </a>
+            <p style="color: rgba(165, 79, 42, 0.888); font-size:100%; font-weight: 100">
+                <a style="color: rgba(165, 79, 42, 0.888); font: size 100%;; font-weight: 800">
+                    简介：
+                </a>也是一个有众多的免费在线游戏的小众网站
+            </p>
+            <p style="color: rgb(165, 79, 42); font-size:100%; font-weight: 100">
+                正经 | 丰富
+            </p>
+            <p style="color: rgba(133, 118, 112, 0.888); font-size:100%; font-weight: 100">
+                [ 支持移动端 | 国外服务器，或出现加载卡慢 ]
+            </p>
+
+            <h1 style="color: gray;text-align: center;">-</h1>
+            <h1 class=name style="color: black;font-size:170%">『 NEAL.FUN 』
+            </h1>
+            <p style="text-align:center;">
+                <img style="width: 300px;margin: 10px" src="https://neal.fun/general/logo.svg"></img>
+            </p>
+
+            <a href="https://neal.fun">
+                <button class="butt-enter">
+                    进入网站
+                </button>
+            </a>
+            <p style="color: rgba(165, 79, 42, 0.888); font-size:100%; font-weight: 100">
+                <a style="color: rgba(165, 79, 42, 0.888); font: size 100%;; font-weight: 800">
+                    简介：
+                </a> 一整个网站都是有病的游戏
+            </p>
+            <p style="color: rgba(165, 79, 42, 0.888); font-size:100%; font-weight: 100">
+                有病 | 丰富
+            </p>
+            <p style="color: rgba(133, 118, 112, 0.888); font-size:100%; font-weight: 100">
+                [ 支持移动端 | 国外服务器，或出现加载卡慢 ]
+            </p>
+            <h1 style="color: gray;text-align: center;">-</h1>
+            <h1 style="text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.099);color: #f8d3c0;font-size:170%">『 findtheinvisiblecow 』
+            </h1>
+            <p style="text-align:center;">
+                <img style="width: 200px;margin: 10px" src="https://tse1-mm.cn.bing.net/th/id/OIP-C.0GRXu_e2yXOrdbK75IKuaQHaHa?w=192&h=192&c=7&r=0&o=5&dpr=1.4&pid=1.7"></img>
+            </p>
+
+            <a href="https://findtheinvisiblecow.com/">
+                <button class="butt-enter">
+                    进入网站
+                </button>
+            </a>
+            <p style="color: rgba(165, 79, 42, 0.888); font-size:100%; font-weight: 100">
+                <a style="color: rgba(165, 79, 42, 0.888); font: size 100%;; font-weight: 800">
+                    简介：
+                </a> 一个找牛的小游戏
+            </p>
+            <p style="color: rgba(165, 79, 42, 0.888); font-size:100%; font-weight: 100">
+                有病 | 有声音
+            </p>
+            <p style="color: rgba(133, 118, 112, 0.888); font-size:100%; font-weight: 100">
+                [ 移动端通过疯狂盲点屏幕也可以玩 ]
+            </p>
+            <h1 style="color: gray;text-align: center;">-</h1>
+            <h1 class=name style="color: #804F23;font-size:170%">『 寻找不动的emoji 』
+            </h1>
+            <p style="text-align:center;">
+                <img style="width: 200px;margin: 10px" src="https://tse1-mm.cn.bing.net/th/id/OIP-C.2IioIoUofiYjlMQrCWkrgQHaHa?w=216&h=216&c=7&r=0&o=5&dpr=1.4&pid=1.7"></img>
+            </p>
+
+            <a href="http://emojisandearthporn.com/200-junk-food.html">
+                <button class="butt-enter">
+                    进入网站
+                </button>
+            </a>
+            <p style="color: rgba(165, 79, 42, 0.888); font-size:100%; font-weight: 100">
+                <a style="color: rgba(165, 79, 42, 0.888); font: size 100%;; font-weight: 800">
+                    简介：
+                </a> 如题，一个寻找不会动的emoji的游戏
+            </p>
+            <p style="color: rgba(165, 79, 42, 0.888); font-size:100%; font-weight: 100">
+                比较无脑 | 消遣
+            </p>
+            <p style="color: rgba(133, 118, 112, 0.888); font-size:100%; font-weight: 100">
+                [ 支持移动端 ]
+            </p>
+
+            <h1 style="color: gray;text-align: center;">-</h1>
+            <h1 class=name style="color: black;font-size:170%">『 请画一个小人 』
+            </h1>
+            <p style="text-align:center;">
+                <img style="width: 300px;margin: 10px" src="https://tse3-mm.cn.bing.net/th/id/OIP-C.wUO6TG3Ed_WBmIxFDt5IGgHaFu?w=222&h=180&c=7&r=0&o=5&dpr=1.4&pid=1.7"></img>
+            </p>
+
+            <a href="https://www.webhek.com/post/draw-a-stickman/">
+                <button class="butt-enter">
+                    进入网站
+                </button>
+            </a>
+            <p style="color: rgba(165, 79, 42, 0.888); font-size:100%; font-weight: 100">
+                <a style="color: rgba(165, 79, 42, 0.888); font: size 100%;; font-weight: 800">
+                    简介：
+                </a> 随便画一个小人，然后通过画画帮助小人完成冒险。根据画与要求内容的相似程度可能会有不同的剧情走向
+            </p>
+            <a style="color: rgba(165, 79, 42, 0.888); font: size 100%; font-weight: 500">
+                比较有病 | 创意
+            </a>
+            <p style="color: rgba(133, 118, 112, 0.888); font-size:100%; font-weight: 100">
+                [ 不适配移动端 ]
+            </p>
+
+            <h1 style="color: gray;text-align: center;">-</h1>
+            <h1 class=name style="text-align:center;color: black;font-size:140%">『 Wonderful of Wonderful Art 』
+            </h1>
+            <p style="text-align:center;">
+                <img style="width: 200px;margin: 10px" src="https://www.bing.com/th/id/OGC.1663d87e8fecceab10e5e778ab5d4672?pid=1.7&rurl=https%3a%2f%2fimg.zcool.cn%2fcommunity%2f019db35c4aedd4a801213f26b5ea7c.gif&ehk=ZrZu3cysW65ctsVAxGgzg58%2b8D%2fk%2f5zOQj9pgQtpWi4%3d"></img>
+
+            </p>
+
+            <a href="https://aidn.jp/wowa/">
+                <button class="butt-enter">
+                    进入网站
+                </button>
+            </a>
+            <p style="color: rgba(165, 79, 42, 0.888); font-size:100%; font-weight: 100">
+                <a style="color: rgba(165, 79, 42, 0.888); font: size 100%;; font-weight: 800">
+                    简介：
+                </a> 随便画一个小人然后看她跳舞
+            </p>
+
+            <p style="color: rgba(165, 79, 42, 0.888); font-size:100%; font-weight: 100">
+                比较有病 | 有声音
+            </p>
+            <p style="color: rgba(133, 118, 112, 0.888); font-size:100%; font-weight: 100">
+                [ 支持移动端 ]
+            </p>
+            <h1 style="color: gray;text-align: center;">·</h1>
+            <p style="text-align:center;">
+                <img src="QuestionMark.png"></img>
+            </p>
+            <h1 style="color: gray">敬请期待</h1>
+            <h1 style="color: gray;text-align: center;">......</h1>
+
+        </div>
+        <div style="
+          max-width: 760px;
+          margin: 30px auto;
+          padding: 15px;
+          line-height: 1.7;
+        ">
+            <h1 style="color: gray;text-align: center;">·</h1>
+
+            <p class=name style="text-align: center; font-size:170%; font-weight: 900">
+                店长留言
+            </p>
+
+            <p style="font-weight: 100;font-size: 110%">
+                <a style="font-weight: 700;color: #FD8E00;">为什么是『一个』：</a> “『一个』系列 ” 其实是我当电教员的这段时间为了满足老师的教学需求和同学们的呼声去写的一些小东西。代码层面其实都不算好，很多地方写的就是依托答辩，但对于我来说其实多多少少还是有在这个过程里学到东西的，写这些答辩在某种程度上也确实让我获得了某些成就感。至于这个命名的话......其实只是因为方便又好用而已（撤回
+            </p>
+
+            <p style="font-weight: 100;font-size: 110%">
+                <a style="font-weight: 700;color: #FD8E00;">
+                    『货架』和『经销柜台』有什么区别：</a> 『货架』中是一些我自己写的软件；『经销柜台』里就是一些我推荐的亲测好用的网站，后续这个柜台可能会持续更新。
+            </p>
+            <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <p style="font-weight: 100;font-size: 110%">
+                <a style="font-weight: 700;color: #FD8E00;">
+                    本店业绩怎么样：</a>
+                <span id="busuanzi_container_site_uv">
+                    目前实际已有<span id="busuanzi_value_site_uv"></span>人发现本店，</span>欢迎各位投资人入股/doge （本站数据统计在某些浏览器中或许会显示异常，但问题不大、、
+            </p>
+
+
+        </div>
+        <div style="
+          background-color: rgb(233, 229, 229);
+          text-align: center;
+          padding: 15px;">
+            <p style="text-align: center;">
+                <a href="https://space.bilibili.com/9841658?spm_id_from=333.337.0.0">
+                    <img style="width: 60px;margin: 10px;" src="/head.png"></img>
+                </a>
+            </p>
+            <p style="font-size: 15px; font-weight: 900">
+                店长（开发者）：热心市民小许
+            </p>
+            <p style="font-weight: 90; font-size: smaller;">揭阳第一中学101届4班垫脚猿</p>
+            <h5 style="color: gray;text-align: center;">·</h5>
+            <p style="font-weight: 100; font-size: x-small">
+                “ 不要倒闭不要倒闭不要倒闭... ”
+            </p>
+            <p style="font-weight: 100; font-size: x-small">
+                2023.1.20 编辑
             </p>
         </div>
-        <p style="color: #ffc000ff; font-size: 100%; font-weight: 100">
-            <a style="color: #ffc000ff; font-size:100% ; font-weight: 800"> 不推荐</a> | 下载速度较慢 | 需网页登录 | 20MB
-        </p>
-        <h3 style="color: gray;text-align: center;">—</h3>
-
-        <p style="font-size:170%; font-weight: 800">
-            阿里云盘下载
-        </p>
-        <a href="https://www.aliyundrive.com/s/mmbrtr5kpAZ ">
-            <button class="butt-enter">
-                开始下载
-            </button>
-        </a>
-        <p style="color: #ffc000ff; font-size: 100%; font-weight: 100">
-            <a style="color: #ffc000ff; font-size: 100%; font-weight: 800">
-                较推荐
-            </a> | 下载速度快 | 需网页登录 | 20MB
-        </p>
     </div>
 
-    <div class="wcc-list" style="
-        color:black;
-        text-align: center;
-        max-width: 760px;
-        margin: 30px auto;
-        padding: 15px;
-        line-height: 2;
-      ">
-        <h1 style="color: gray;text-align: center;">·</h1>
-        <a name="b" style=" position: relative;top:-30px;display: block;height: 0;overflow: hidden;"></a>
+    <script>
+        $(window).scroll(function(event) {
+            checkscroll()
+        });
 
-        <h1 id="b1" class="name" style="color:#002fa7">| 功能简介 |</h1>
-        <img style="height: auto; width: auto\9; width:100%;margin: 10px" src="/ARandomExtractor/AR.png"></img>
-
-        <p style="font-size:200%; font-weight: 900">
-            手动/自动暂停
-        </p>
-        <p style="font-size:180%; font-weight: 900">
-            悬浮窗收起
-        </p>
-        <p style="font-size:160%; font-weight: 900">
-            暗杀模式*
-        </p>
-        <p style="font-size:130%; font-weight: 900">
-            主题切换
-        </p>
-
-        <h2>......</h2>
-    </div>
-
-    <div style="text-align: center">
-        <p style="color: #ffc000ff; font-size: smaller; font-weight: 100">
-            *注：暗杀模式入口隐藏。
-        </p>
-        <p style="color: #ffc000ff; font-size: smaller; font-weight: 100">
-            暗杀模式打开方式等更多内容详见
-            <a style="text-decoration: none;" href="/ARandomExtractor/readme.txt">
-                《功能指南》
-            </a>
-    </div>
-
-    <div style="
-        max-width: 760px;
-        margin: 30px auto;
-        padding: 15px;
-        line-height: 1.7;
-      ">
-        <h1 style="color: gray;text-align: center;">·</h1>
-
-
-        <p class="name" style="text-align: center; font-size:170%; font-weight: 900">
-            一些开发者掏心窝子的Q&A
-        </p>
-
-        <p style="font-weight: 100;font-size: 110%">
-            <a style="font-weight: 700;color: #002fa7;">关于开发动机：</a>写这个项目一方面是想锻炼一下自己，因为编程方面学的还比较浅，其次是因为当时班里的确有这个需求，我这个抽号器也是根据老师（亲爱的奕峰叔叔/doge）和同学的需求不断调整的。 不过因为能力问题，这个抽号器虽然主要功能都实现了，但问题其实还不少。好在问题主要是在代码层面，由于这些功能并不复杂，所以日常使用其实很难感觉到代码的臃肿和低效带来的影响，凑合用还是没啥问题的~ 。
-        </p>
-        <p style="font-weight: 100;font-size: 110%">
-            <a style="font-weight: 700;color: #002fa7;">关于为什么在正常缩放（1080p的125%）的屏幕上打开该软件的话界面会偏小：</a>由于这个抽号器是我当时基于教室的seewo开发的，而当时教室的seewo屏幕如果调成正常缩放比例的话， 有些老师（亲爱的苏珊阿姨/doge）会点不到屏幕上半部分的软件，所以我就把seewo的显示缩放比例调大了，然后照这个比例开发。
-        </p>
-    </div>
-    <div style="
-        background-color: rgb(233, 229, 229);
-        text-align: center;
-        padding: 15px;
-      ">
-        <p style="text-align: center;">
-            <a href="https://space.bilibili.com/9841658?spm_id_from=333.337.0.0">
-                <img style="width: 60px;margin: 10px;" src="/head.png"></img>
-            </a>
-        </p>
-        <p style="font-size: 15px; font-weight: 900">
-            店长（开发者）：热心市民小许
-        </p>
-        <p style="font-weight: 90; font-size: smaller;">揭阳第一中学101届4班垫脚员</p>
-        <h5 style="color: gray;text-align: center;">·</h5>
-
-        <p style="font-weight: 100; font-size: x-small">
-            “ 不要倒闭不要倒闭不要倒闭... ”
-        </p>
-        <p style="font-weight: 100; font-size: x-small">
-            2023.1.20 编辑
-        </p>
-    </div>
+        function checkscroll() {
+            var winPos = $(window).scrollTop() + 182; //屏幕位置
+            var NodePos = [$('#a1').offset().top, $('#a2').offset().top, $('#a3').offset().top, $('#a4').offset().top], //提前获取好元素位置
+                length = NodePos.length;
+            if (winPos >= NodePos[0] && winPos <= NodePos[1]) {
+                $('.wc-nav a').removeClass('active');
+                $('.wc-nav a:nth-child(1)').addClass('active');
+            } else if (winPos >= NodePos[1] && winPos <= NodePos[2]) {
+                $('.wc-nav a').removeClass('active');
+                $('.wc-nav a:nth-child(2)').addClass('active');
+            } else if (winPos >= NodePos[2] && winPos <= NodePos[3]) {
+                $('.wc-nav a').removeClass('active');
+                $('.wc-nav a:nth-child(3)').addClass('active');
+            }
+        }
+        $(function() {
+            var scTop = 0; //初始化垂直滚动的距离
+            $(document).scroll(function() {
+                scTop = $(this).scrollTop(); //获取到滚动条拉动的距离
+                console.log(scTop); //查看滚动时，垂直方向上，滚动条滚动的距离
+                if (scTop >= 200) {
+                    //核心部分：当滚动条拉动的距离大于等于导航栏距离顶部的距离时，添加指定的样式
+                    $("#sort_menus").addClass("fixDiv");
+                } else {
+                    $("#sort_menus").removeClass("fixDiv");
+                }
+            });
+        })
+    </script>
 </body>
 
 </html>
