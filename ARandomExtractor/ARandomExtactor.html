@@ -8,24 +8,126 @@
     <title>『一个抽号器』货物标签页</title>
     <link rel="shortcut icon" href="/ARandomExtractor/icon.png">
 </head>
+<style>
+    .header {
+        opacity: 1;
+        height: 37px;
+        margin: 0 auto;
+        background: #002fa7e9;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        box-shadow: 0px 15px 15px -15px rgba(96, 94, 94, 0.41);
+    }
+
+    .wrap-content {
+        margin: 0 auto;
+    }
+
+    /*导航栏*/
+
+    .wc-nav {
+        right: 0;
+        position: fixed;
+        height: 37px;
+        font-size: 20px;
+        z-index: 999;
+        top: 7px;
+        opacity: 10;
+    }
+
+    .wn-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 30px;
+    }
+
+    .wc-nav a {
+        color: #333;
+        font-weight: bold;
+        text-decoration: none;
+        -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+        -webkit-user-select: none;
+        -moz-user-focus: none;
+        -moz-user-select: none;
+        position: relative;
+        text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1)
+    }
+
+    .wc-nav a span {
+        position: absolute;
+        top: -20px;
+        right: -34px;
+        font-size: 15px;
+        color: rgba(165, 79, 42, 0.888);
+    }
+
+    .fixDiv {
+        opacity: 1;
+    }
+
+    .fixDivnone {
+        opacity: 0;
+    }
+
+    /*
+    .wc-nav .active {
+        color: rgba(165, 79, 42, 0.888);
+        position: relative;
+    }
+
+    .wc-nav .active::before {
+        content: '';
+        height: 3px;
+        width: 40px;
+        border-radius: 3px;
+        background: -webkit-linear-gradient(right, rgba(165, 79, 42, 0.888), #FE8E17);
+        position: absolute;
+        margin-top: 30px;
+        left: 0%;
+    }
+    */
+
+    .wcc-list {
+        border: 1px solid rgba(165, 79, 42, 0.278);
+    }
+
+    .name {
+        text-shadow: 5px 5px 7px rgba(0, 0, 0, 0.17);
+    }
+
+    .butt-enter {
+        cursor: pointer;
+        height: 40px;
+        border-radius: 4px;
+        border-color: #ffc000ff;
+        background-color: #ffc000ff;
+        color: white;
+        font-size: 130%;
+        font-weight: 700;
+    }
+</style>
 
 <body>
-    <div style="background-color: #002fa7; text-align: center; padding: 15px">
-        <p style="text-align:center">
-            <img src="/ARandomExtractor/icon.png"></img>
-        </p>
-        <h1 style="letter-spacing: 10px; font-size: 40px; color: aliceblue">
+    <div class="header" style=" height: 45px;">
+        <p
+            style="margin-left: 10px;padding: 4px; letter-spacing:2px; font-size: 150%; font-weight:600; color: aliceblue;margin: auto;">
             ·一个抽号器·
-        </h1>
-        <p style="
-          letter-spacing: 7px;
-          font-size: 25px;
-          font-weight: 100;
-          color: aliceblue;
-        ">
-            ARandomExtractor
         </p>
     </div>
+    <div style=" text-align: center; padding: 0px">
+    </div>
+        <div class="wc-nav" id="sort_menus;">
+            <div style="float: left;" class="wrap-content">
+                <!--导航-->
+        
+                <a style="margin-right: 10px;color: white;" href="#a" class='active'>下载入口 </a>
+                <a style="margin-right: 10px;color: white;" href="#b">功能简介</a>
+        
+            </div>
+        </div>
     <div style="
         text-align: center;
         max-width: 760px;
@@ -33,9 +135,25 @@
         padding: 15px;
         line-height: 1.7;
       ">
+    <p style="text-align:center">
+        <img src="/ARandomExtractor/icon.png"></img>
+    </p>
+    
+    <h1 style="text-shadow: 5px 5px 7px rgba(0, 0, 0, 0.188);letter-spacing: 10px; font-size: 40px;color:#002fa7">
+        ·一个抽号器·
+    </h1>
+    <p style="
+              letter-spacing: 7px;
+              font-size: 25px;
+              font-weight: 100;
+              color: #002fa7;
+            ">
+        ARandomExtractor
+    </p>
         <h1 style="color: gray;text-align: center;">·</h1>
+        <a name="a" style=" position: relative;top:-30px;display: block;height: 0;overflow: hidden;"></a>
 
-        <h1 style="color: #002fa7">| 下载入口 |
+        <h1 id="a1" class="name" style="color: #002fa7">| 下载入口 |
             <p style="color:black; font-size: 50%; font-weight: 100">
                 （目前仅支持PC端）
             </p>
@@ -46,13 +164,7 @@
         </p>
 
         <a href="/ARandomExtractor\ARandomExtractor-setup.zip">
-            <button style="
-            cursor:pointer;
-            background-color: #ffc000ff;
-            color: white;
-            font-size: 130%;
-            font-weight: 700;
-          ">
+            <button class="butt-enter">
                 开始下载
             </button>
         </a>
@@ -74,13 +186,7 @@
         </p>
 
         <a href="https://pan.baidu.com/s/1IHSBqpWoffq1jiJic7psYA?pwd=1014">
-            <button style="
-            cursor:pointer;
-            background-color: #ffc000ff;
-            color: white;
-            font-size: 130%;
-            font-weight: 700;
-          ">
+            <button class="butt-enter">
                 开始下载
             </button>
         </a>
@@ -101,13 +207,7 @@
             阿里云盘下载
         </p>
         <a href="https://www.aliyundrive.com/s/mmbrtr5kpAZ ">
-            <button style="
-            cursor:pointer;
-            background-color: #ffc000ff;
-            color: white;
-            font-size: 130%;
-            font-weight: 700;
-          ">
+            <button class="butt-enter">
                 开始下载
             </button>
         </a>
@@ -127,9 +227,11 @@
         line-height: 2;
       ">
         <h1 style="color: gray;text-align: center;">·</h1>
+        <a name="b" style=" position: relative;top:-30px;display: block;height: 0;overflow: hidden;"></a>
 
+        <h1 id="b1"class="name" style="color:#002fa7">| 功能简介 |</h1>
+        <img style="width: 450px;margin: 10px" src="/ARandomExtractor/AR.png"></img>
 
-        <h1 style="color:#002fa7">| 功能简介 |</h1>
         <p style="font-size:200%; font-weight: 900">
             手动/自动暂停
         </p>
@@ -152,7 +254,7 @@
         </p>
         <p style="color: #ffc000ff; font-size: smaller; font-weight: 100">
             暗杀模式打开方式等更多内容详见
-            <a href="/ARandomExtractor/readme.txt">
+            <a style="text-decoration: none;" href="/ARandomExtractor/readme.txt">
                 《功能指南》
             </a>
     </div>
@@ -170,12 +272,16 @@
         <p>
             <a href="/index.html">
                 <button style="
-              cursor:pointer;
-              background-color: rgba(165, 79, 42, 0.888);
-              color: white;
-              font-size: 150%;
-              font-weight: 700;
-            ">
+                            text-align: center;
+                            cursor: pointer;
+                            height: 40px;
+                            border-radius: 4px;
+                            border-color: rgba(165, 79, 42, 0.888);
+                            background-color: rgba(165, 79, 42, 0.888);
+                            color: white;
+                            font-size: 130%;
+                            font-weight: 700;
+                          ">
                     回到货架
                 </button>
             </a>
@@ -190,7 +296,7 @@
         <h1 style="color: gray;text-align: center;">·</h1>
 
 
-        <p style="text-align: center; font-size:170%; font-weight: 900">
+        <p class="name" style="text-align: center; font-size:170%; font-weight: 900">
             一些开发者掏心窝子的Q&A
         </p>
 
@@ -221,9 +327,11 @@
         <h5 style="color: gray;text-align: center;">·</h5>
 
         <p style="font-weight: 100; font-size: x-small">
-            “ 咳咳现在这个网页界面还是叙利亚战损版，有空一定会再美化一下的！（画饼/doge ”
+            “ 不要倒闭不要倒闭不要倒闭... ”
         </p>
-
+        <p style="font-weight: 100; font-size: x-small">
+            2023.1.20 编辑
+        </p>
     </div>
 </body>
 
