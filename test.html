@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #dianzan {
+        width: 55px;
+        height: 22px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0 10px;
+        border-radius: 6px;
+        user-select: none;
+        cursor: pointer;
+    }
+    
+    #dianzan img{
+        width: 30px;
+        height: 30px;
+    }
+ 
+    #dianzan #num {
+        line-height: 30px;
+        margin-right: 3px;
+    } 
+</style>
+<body>
+
+ <div id="dianzan">
+    <img src="https://csdnimg.cn/release/blogv2/dist/pc/img/newHeart2021Active.png" id="like-img-active" style="display:none" alt="">
+    <img src="https://csdnimg.cn/release/blogv2/dist/pc/img/newHeart2021White.png" id="like-img" style="display:block" alt="">
+    <span id="num" style="color: rgb(153, 154, 170);">1</span>
+</div>  
+</body>
+
+<script>
+    var zan = document.getElementById('dianzan');
+    var num = document.getElementById('num');
+    var flag = 0;
+    zan.onclick = function() {
+        if (flag==0) {
+            num.innerHTML++;
+            document.getElementById("like-img").style.display="none";
+            document.getElementById("like-img-active").style.display="block";
+            document.getElementById("num").style.color="rgb(252, 85, 49)";
+            flag++;
+        } else if (flag==1) {
+            num.innerHTML--;
+            document.getElementById("like-img").style.display="block";
+            document.getElementById("like-img-active").style.display="none";
+            document.getElementById("num").style.color="rgb(153, 154, 170)";
+            flag--;
+        }
+        
+        }
+        
+     
+     
+</script>
+</html>
